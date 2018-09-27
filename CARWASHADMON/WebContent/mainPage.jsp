@@ -8,15 +8,7 @@
 </head>
 <body>
 
-	<form action='LoginRegister' method="post">
-	<table>
-		<tr><td>${message}</td></tr>
-		<tr><td>UserName: </td> <td><input type="text" name="name"></td></tr>
-		<tr><td>Password: </td> <td><input type="password" name="password"></td></tr>
-		<tr><td><input type="submit" name="submit" value="login"></td></tr>
-		
-	</table>
-	
-	</form>
+	<h1>WELCOME TO THE MAIN PAGE ${message}</h1>
+
 </body>
 </html>
