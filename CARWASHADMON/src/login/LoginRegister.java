@@ -1,4 +1,4 @@
-package login.submit;
+package login;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -30,7 +30,7 @@ public class LoginRegister extends HttpServlet {
 		
 		UserDAO ud = new UserDAOImpl();
 		
-		String userName = request.getParameter("username");
+		String userName = request.getParameter("Username");
 		String password = request.getParameter("password");
 		String submitType = request.getParameter("submit");
 		
@@ -38,7 +38,7 @@ public class LoginRegister extends HttpServlet {
 		u=ud.getUser(userName, password);
 		
 		System.out.println("Username"+u.getUsername()+"password"+u.getPassword()+"name"+u.getName());
-		if(submitType.equals("login") && u!=null && u.getName()!=null ) {
+		if(submitType.equals("Login") && u!=null && u.getName()!=null ) {
 			
 			request.setAttribute("message", u.getName());
 			request.getRequestDispatcher("mainPage.jsp").forward(request, response);;

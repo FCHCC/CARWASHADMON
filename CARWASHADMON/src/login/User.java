@@ -1,4 +1,4 @@
-package login.submit;
+package login;
 
 public class User {
 
