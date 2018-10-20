@@ -33,6 +33,7 @@ public class ReservaDAO {
 			System.out.println(r2);
 			String sql = "insert into Reserva(ServiceName,Fecha,Hora) values ('"+r.getServiceName()+"','"+r1+"','"+r2+"')";
 			System.out.println(sql);
+			
 			template.update(sql);
 		}
 		

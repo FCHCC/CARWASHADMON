@@ -25,7 +25,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     </bean>
     
  <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-<property name="driverClassName" value="com.microsoft.sqlserver"></property>  
+<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>  
 <property name="url" value="jdbc:sqlserver://FCCC:1433;databaseName=carwashadmin"></property>  
 <property name="username" value="dB"></property>  
 <property name="password" value="root"></property>  
@@ -46,5 +46,9 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
   
 <bean id="dao" class="com.fchcc.carwashadmin.dao.ReservaDAO">  
 <property name="template" ref="jt"></property>  
-</bean>  
+</bean> 
+
+<bean id="daou" class="com.fchcc.carwashadmin.dao.UsersDAO">  
+<property name="template" ref="jt"></property>  
+</bean> 
 </beans>  
