@@ -9,15 +9,17 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ADMINISTRADOR REAL CAR WASH</title>
 </head>
 <body>
-	<div>
+	<div class="text-center">
+	
+    	  <img src="${pageContext.request.contextPath}/img/LOGOCARWASH.jpg" alt="logo carwash" width="250" height="250" class="center-block"/>
     	  <div class="modal-dialog">
-    	  		<img src="webapp/img/LOGOCARWASH.jpg" alt="logo carwash"/>
 				<div class="loginmodal-container">
 					<h1>BIENVENIDO</h1><br>
 					<h3>${message}</h3>
+					
 				  <form:form method="POST" modelAttribute="users" action="login">
 					<form:input type="text" path="userName" id="userName" placeholder="Usuario"/>
 					<div class="has-error">
