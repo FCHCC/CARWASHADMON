@@ -15,28 +15,32 @@
 	<div class="text-center">
 	
     	  <img src="${pageContext.request.contextPath}/img/LOGOCARWASH.jpg" alt="logo carwash" width="250" height="250" class="center-block"/>
-    	  <div class="modal-dialog">
-				<div class="loginmodal-container">
+ 
+				<div>
 					<h1>BIENVENIDO</h1><br>
 					<h3>${message}</h3>
 					
 				  <form:form method="POST" modelAttribute="users" action="login">
-					<form:input type="text" path="userName" id="userName" placeholder="Usuario"/>
-					<div class="has-error">
-						<form:errors path="userName" class="help-inline"/>
+					<div class="form-group">
+						<form:input type="text" path="userName" id="userName" placeholder="Usuario"/>
+						<div class="has-error">
+							<form:errors path="userName" class="help-inline"/>
+						</div>
 					</div>
-					<form:input type="password" path="password" id="password" placeholder="Contraseña"/>
-					<div class="has-error">
-						<form:errors path="password" class="help-inline"/>
-					</div>
-					<input type="submit" name="login" class="login loginmodal-submit" value="Login"/>
-				  </form:form>
 					
-				  <div class="login-help">
-					<a href="#">Register</a> - <a href="#">Forgot Password</a>
-				  </div>
+					<div class="form-group">
+						<form:input type="password" path="password" id="password" placeholder="Contraseña"/>
+						<div class="has-error">
+							<form:errors path="password" class="help-inline"/>
+						</div>
+					</div>
+					
+					<div class="form-group text-center">
+						<input type="submit" name="login" class="btn btn-primary center-block" value="INICIAR SESION"/>
+					</div>
+				  </form:form>
 				</div>
-			</div>
+			
 		  </div>
 		  
 		  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
