@@ -31,7 +31,7 @@ public class LoginController {
 		
 			Users users = new Users();
 			model.addAttribute("users", users);
-			return "loginpage";
+			return "/loginpage";
 			
 	}
 	
