@@ -34,9 +34,9 @@
 			<div class="form-group col-md-12">
 				<label class="col-md-3 control-lable" for="fecha">FECHA</label>
 				<div class="form-control">
-					<form:input type="text" path="fecha" id="fecha" class="form-control input-sm"/>(yyyy-MM-dd)
+					<form:input type="text" path="fecha" id="fecha" class="form-control input-sm"/>(YYYY-MM-DD)
 					<div class="has-error">
-						<form:errors path="dob" class="help-inline"/>
+						<form:errors path="fecha" class="help-inline"/>
 					</div>
 				</div>
 			</div>
@@ -48,7 +48,7 @@
 				<div class="form-control">
 					<form:input type="text" path="hora" id="hora" class="form-control input-sm"/>(HH:MM:SS)
 					<div class="has-error">
-						<form:errors path="dob" class="help-inline"/>
+						<form:errors path="hora" class="help-inline"/>
 					</div>
 				</div>
 			</div>

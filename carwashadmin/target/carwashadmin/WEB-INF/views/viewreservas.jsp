@@ -28,11 +28,11 @@
 	</table>
 	
 	<form:form>
-		<table id="t01" border="2" width="70%" cellpadding="2">
+		<table id="t01" border="2" width="100%" cellpadding="2">
 			<tr><th>Id</th></tr>
 			<tr><th>SERVICIO</th></tr>
 			<tr><th>FECHA</th></tr>
-			<tr><th>HRA</th></tr>
+			<tr><th>HORA</th></tr>
 			
 			<c:forEach var="reserva" items="${list}">
 				
