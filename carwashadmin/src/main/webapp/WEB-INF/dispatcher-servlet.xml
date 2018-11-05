@@ -19,7 +19,7 @@
   
    <mvc:annotation-driven/>
    <mvc:default-servlet-handler />
-   <context:component-scan base-package="com.fchcc.carwashadmin" />
+   <context:component-scan base-package="src.main.java.com.fchcc.carwashadmin" />
 	
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename">
