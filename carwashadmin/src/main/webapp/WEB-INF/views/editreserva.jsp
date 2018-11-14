@@ -14,8 +14,8 @@
 <body>
 	<div class="form-container">
 		<div>
-			<img src="${pageContext.request.contextPath}/img/LOGOCARWASH.jpg" alt="logo carwash" width="200" height="200" class="rounded float-right" />
-			<a href="#" class="nav-link"><h6>CERRAR SESION</h6></a>
+			<img src="img/LOGOCARWASH.jpg" alt="logo carwash" width="100" height="100" class="rounded float-right" />
+			<<a href="j_spring_security_logout" class="nav-link"><h6>CERRAR SESION</h6></a>
 			<h1 class="text-center">REAL CARWASH RESERVAS</h1>		
 		</div>
 		
