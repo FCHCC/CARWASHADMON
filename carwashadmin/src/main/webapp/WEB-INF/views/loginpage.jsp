@@ -14,7 +14,7 @@
 <body>
 	<div class="text-center">
 
-    	  <img src="<c:url value="resources/img/LOGOCARWASH.jpg"></c:url>" alt="logo carwash" width="250" height="250" class="center-block"/>
+    	  <img src="<c:url value='source/img/LOGOCARWASH.jpg'/>" alt="logo carwash" />
  
 				<div>
 					<h1>BIENVENIDO</h1><br>

@@ -1,6 +1,5 @@
 package com.fchcc.carwashadmin.configuration;
 
-
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
@@ -16,6 +15,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.ResourceBundleViewResolver;
+
 
 
 
@@ -47,12 +48,10 @@ public class WebConfig extends WebMvcConfigurationSupport {
 	 }
 	 
 
-	  
-	 
 	 @Override
 	 public void addResourceHandlers(ResourceHandlerRegistry registry){
-	  registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	  registry.addResourceHandler("/img/**").addResourceLocations("resources/img/");
+	  registry.addResourceHandler("/source/**").addResourceLocations("/source/");
+	  registry.addResourceHandler("/img/**").addResourceLocations("/img/");
 	 }
 	 
 	 
@@ -62,8 +61,17 @@ public class WebConfig extends WebMvcConfigurationSupport {
 	  internalResourceViewResolver.setViewClass(JstlView.class);
 	  internalResourceViewResolver.setPrefix("/WEB-INF/");
 	  internalResourceViewResolver.setSuffix(".jsp");
+	  internalResourceViewResolver.setOrder(2);
 	  return internalResourceViewResolver;
 	 }
 	 
+	 @Bean  
+	    public ResourceBundleViewResolver resourceBundleViewResolver() {  
+		ResourceBundleViewResolver resolver = new ResourceBundleViewResolver();
+		resolver.setBasename("views");
+		resolver.setOrder(1);
+	        return resolver;  
+	    }
 
 }
+

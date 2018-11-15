@@ -15,11 +15,11 @@
 	<div class="form-container">
 		<div>
 			<img src="img/LOGOCARWASH.jpg" alt="logo carwash" width="100" height="100" class="rounded float-right" />
-			<<a href="j_spring_security_logout" class="nav-link"><h6>CERRAR SESION</h6></a>
+			<h6><a href="j_spring_security_logout" class="nav-link">CERRAR SESION</a></h6>
 			<h1 class="text-center">REAL CARWASH RESERVAS</h1>		
 		</div>
 		
-		<form:form method="POST" modelAttribute="reserva" class="form-horizontal" action="/carwashadmin/editreserva">
+		<form:form method="POST" modelAttribute="reserva" class="form-horizontal" action="/carwashadmin/editsave">
 			
 			<div>
 				<div class="form-group">
@@ -42,18 +42,18 @@
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="fecha">FECHA</label>
-						<form:input type="text" path="fecha" id="fecha" class="form-control" placeholder="(YYYY-MM-DD)"/>
+						<form:input type="date" path="Fecha" id="fecha" class="form-control" placeholder="(YYYY-MM-DD)"/>
 						<div class="has-error">
-							<form:errors path="fecha" class="help-inline"/>
+							<form:errors path="Fecha" class="help-inline"/>
 						</div>
 				</div>
 		
 			
 					<div class="form-group col-md-6">
 						<label for="hora">HORA</label>
-						<form:input type="text" path="hora" id="hora" class="form-control" placeholder="(HH:MM:SS)"/>
+						<form:input type="time" path="Hora" id="hora" class="form-control" placeholder="(HH:MM:SS)" step="2"/>
 						<div class="has-error">
-							<form:errors path="hora" class="help-inline"/>
+							<form:errors path="Hora" class="help-inline"/>
 						</div>
 					</div>
 				</div>

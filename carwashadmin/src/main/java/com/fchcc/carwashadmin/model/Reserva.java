@@ -2,7 +2,6 @@ package com.fchcc.carwashadmin.model;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
@@ -52,5 +51,4 @@ public class Reserva implements Serializable{
 	public void setHora(Date hora) {
 		this.hora = hora;
 	}
-	
 }

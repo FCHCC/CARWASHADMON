@@ -1,6 +1,9 @@
 com\fchcc\carwashadmin\dao\ReservaDaoImpl$ReservaMapper.class
 com\fchcc\carwashadmin\dao\ReservaDaoImpl.class
+com\fchcc\carwashadmin\builder\PDFBuilder.class
 com\fchcc\carwashadmin\controller\ReservaController.class
+com\fchcc\carwashadmin\configuration\WebInit.class
+com\fchcc\carwashadmin\builder\AbstractITextPdfView.class
 com\fchcc\carwashadmin\controller\LoginController.class
 com\fchcc\carwashadmin\dao\UsersDaoImpl$UsersMapper.class
 com\fchcc\carwashadmin\configuration\SecurityInizializer.class
