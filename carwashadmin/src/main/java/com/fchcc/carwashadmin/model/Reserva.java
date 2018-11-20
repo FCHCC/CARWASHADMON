@@ -13,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @NamedQuery(name="Reserva.findAll", query="select r from Reserva r")
 public class Reserva implements Serializable{
 	
-	private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
 	
 	@Id
 	private int id;
@@ -24,7 +24,7 @@ public class Reserva implements Serializable{
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fecha;
 	
-	@DateTimeFormat(pattern="hh:mm:ss")
+	@DateTimeFormat(pattern="HH:mm:ss")
 	private Date hora;
 	
 	public int getId() {
@@ -51,4 +51,5 @@ public class Reserva implements Serializable{
 	public void setHora(Date hora) {
 		this.hora = hora;
 	}
+	
 }

@@ -2,8 +2,8 @@ package com.fchcc.carwashadmin.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+//import java.text.DateFormat;
+//import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,17 +41,17 @@ public class ReservaDaoImpl implements ReservaDAO {
 
 	@Override
 	public int save(Reserva r) {
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
-		DateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); 
+		//DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
+		 //DateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); 
 		 
 		String query ="insert into Reserva (ServiceName, Fecha,Hora) values ( :serviceName, :Fecha, :Hora)";
 		MapSqlParameterSource paramMap = new MapSqlParameterSource();
 		
-       paramMap.addValue("serviceName", r.getServiceName());
-       paramMap.addValue("Fecha", dateFormat.format(r.getFecha()));
-       paramMap.addValue("Hora", timeFormat.format(r.getHora()));
-       // Passing map containing named params
-       return namedParameterJdbcTemplate.update(query, paramMap);
+      paramMap.addValue("serviceName", r.getServiceName());
+      paramMap.addValue("Fecha", r.getFecha());
+      paramMap.addValue("Hora", r.getHora());
+      // Passing map containing named params
+      return namedParameterJdbcTemplate.update(query, paramMap);
 		
 	}
 
@@ -65,20 +65,20 @@ public class ReservaDaoImpl implements ReservaDAO {
 
 	@Override
 	public void update(Reserva r) {
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
-		 DateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); 
+		//DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
+		 //DateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); 
 		String query = "update Reserva set ServiceName = :serviceName, Fecha = :Fecha, Hora = :Hora where Id = :Id";
 		  SqlParameterSource namedParameters = new MapSqlParameterSource()
 				  .addValue("serviceName", r.getServiceName())
-				  .addValue("Fecha", dateFormat.format(r.getFecha()))
-				  .addValue("Hora", timeFormat.format(r.getHora()))
+				  .addValue("Fecha", r.getFecha())
+				  .addValue("Hora", r.getHora())
 		  		  .addValue("Id", r.getId());
-       int status = namedParameterJdbcTemplate.update(query, namedParameters); 
-       if(status != 0){
-           System.out.println("Reserva data updated for ID " + r.getId());
-       }else{
-           System.out.println("No Reserva found with ID " + r.getId());
-       }
+      int status = namedParameterJdbcTemplate.update(query, namedParameters); 
+      if(status != 0){
+          System.out.println("Reserva data updated for ID " + r.getId());
+      }else{
+          System.out.println("No Reserva found with ID " + r.getId());
+      }
 
 	}
 
@@ -99,16 +99,16 @@ public class ReservaDaoImpl implements ReservaDAO {
 	
 	
 	private static final class ReservaMapper implements RowMapper<Reserva> {
-       public Reserva mapRow(ResultSet rs, int rowNum) throws SQLException {
-           
-    	   Reserva rev = new Reserva();
-    	   	rev.setId(rs.getInt("Id"));
-    	   	rev.setServiceName(rs.getString("ServiceName"));
-    	   	rev.setFecha(rs.getDate("Fecha"));
-    	   	rev.setHora(rs.getTime("Hora"));
-           return rev;
-       }
-   }
+      public Reserva mapRow(ResultSet rs, int rowNum) throws SQLException {
+          
+   	   Reserva rev = new Reserva();
+   	   	rev.setId(rs.getInt("Id"));
+   	   	rev.setServiceName(rs.getString("ServiceName"));
+   	   	rev.setFecha(rs.getDate("Fecha"));
+   	   	rev.setHora(rs.getTime("Hora"));
+          return rev;
+      }
+  }
 
 
 

@@ -10,7 +10,7 @@
 	<div>
 	
 		<img src="/resources/img/LOGOCARWASH.jpg" alt="logo carwash" width="100" height="100" class="rounded float-right" />
-		<a href="j_spring_security_logout" class="nav-link"><h6>CERRAR SESION</h6></a>
+		<h6><a href="j_spring_security_logout" class="nav-link">CERRAR SESION</a></h6>
 		<h1 class="text-center">REAL CARWASH RESERVAS</h1>
 		
 	</div>

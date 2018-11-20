@@ -1,19 +1,19 @@
 package com.fchcc.carwashadmin.controller;
 
 
-import java.util.Date;
-import java.text.SimpleDateFormat;
+//import java.util.Date;
+//import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
+//import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
+//import org.springframework.web.bind.WebDataBinder;
+//import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -95,7 +95,7 @@ public class ReservaController {
 		return new ModelAndView("pdfView","list",list);
     }
 	
-	@InitBinder
+	/*@InitBinder
 	public void dataBinding(WebDataBinder binder) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		dateFormat.setLenient(false);
@@ -107,7 +107,7 @@ public class ReservaController {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
 		dateFormat.setLenient(false);
 		binder.registerCustomEditor(Date.class, "Hora", new CustomDateEditor(dateFormat, true));
-	} 
+	} */
 	
 }
 

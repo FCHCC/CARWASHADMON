@@ -19,7 +19,7 @@ public class LoginController {
 	  ModelAndView model = new ModelAndView();
 	  
 	  if(error!=null) {
-	   model.addObject("error", "username or password is incorrect");
+	   model.addObject("error", "Usuario o Contraseña incorrectos");
 	  }
 	  model.setViewName("views/loginpage");
 	   return model;

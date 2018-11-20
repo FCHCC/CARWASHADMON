@@ -51,7 +51,7 @@
 			
 					<div class="form-group col-md-6">
 						<label for="hora">HORA</label>
-						<form:input type="time" path="Hora" id="hora" class="form-control" placeholder="(HH:MM:SS)" step="2"/>
+						<form:input type="text" path="Hora" id="hora" class="form-control" placeholder="HH:mm:ss 24HR"/>
 						<div class="has-error">
 							<form:errors path="Hora" class="help-inline"/>
 						</div>
