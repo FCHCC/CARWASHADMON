@@ -2,7 +2,7 @@
 El proyecto desarrollado es una aplicación web para administrar una lavadora de autos.
 
 La empresa involucrada es REALCARWASH.
-El área de oportunidad encontrada de esta empresa es la gestión de las reservaciones. Para solucionar ese problema he propuesto una herramienta que permita gestionar las reservas y llevar un control de estas, esta herramienta les permitirá crear reservas, editarlas, borrarlas y generará un reporte en el que se mostrará la cantidad de servicios finalizados durante el día. 
+El área de oportunidad encontrada de esta empresa es la gestión de las reservaciones. Para solucionar ese problema he propuesto una herramienta que permita gestionar las reservas y llevar un control de estas, esta herramienta les permitirá crear reservas, editarlas, borrarlas y generará un reporte en el que se mostrará la cantidad de servicios agendados para el día. 
 
 ##ARQUITECTURA
 
