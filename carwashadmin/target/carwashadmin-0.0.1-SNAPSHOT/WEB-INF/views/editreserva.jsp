@@ -19,7 +19,7 @@
 			<h1 class="text-center">REAL CARWASH RESERVAS</h1>		
 		</div>
 		
-		<form:form method="POST" modelAttribute="reserva" class="form-horizontal" action="/carwashadmin/editreserva">
+		<form:form method="POST" modelAttribute="reserva" class="form-horizontal" action="/carwashadmin/editsave">
 			
 			<div>
 				<div class="form-group">
@@ -40,23 +40,22 @@
 					</div>
 		
 				<div class="form-row">
-				<div class="form-group col-md-6">
-					<label for="fecha">FECHA</label>
-					<form:input type="date" path="Fecha" id="fecha" class="form-control" placeholder="(YYYY-MM-DD)"/>
-					<div class="has-error">
-						<form:errors path="fecha" class="help-inline"/>
-					</div>
+					<div class="form-group col-md-6">
+						<label for="fecha">FECHA</label>
+						<form:input type="date" path="Fecha" id="fecha" class="form-control" placeholder="(YYYY-MM-DD)"/>
+						<div class="has-error">
+							<form:errors path="Fecha" class="help-inline"/>
+						</div>
 				</div>
 		
 			
-				<div class="form-group col-md-6">
-					<label for="hora">HORA</label>
-					<form:input type="time" path="Hora" id="hora" class="form-control" placeholder="(HH:MM:SS)" step="2"/>
-					<div class="has-error">
-						<form:errors path="hora" class="help-inline"/>
+					<div class="form-group col-md-6">
+						<label for="hora">HORA</label>
+						<form:input type="time" path="Hora" id="hora" class="form-control" placeholder="(HH:MM:SS)" step="2"/>
+						<div class="has-error">
+							<form:errors path="Hora" class="help-inline"/>
+						</div>
 					</div>
-				</div>
-			
 				</div>
 		
 				<div class="form-group text-center">

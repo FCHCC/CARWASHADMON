@@ -16,7 +16,7 @@
 	
 		<div class="mx-auto" style="width: 1000px;">
 	
-		<img src="img/LOGOCARWASH.jpg" alt="logo carwash" width="100" height="100" class="rounded float-right" />
+		<img src="/resources/img/LOGOCARWASH.jpg" alt="logo carwash" width="100" height="100" class="rounded float-right" />
 		<a href="j_spring_security_logout" class="nav-link"><h6>CERRAR SESION</h6></a>
 		<h1 class="text-center">REAL CARWASH RESERVAS</h1>
 		
@@ -50,6 +50,7 @@
 					</div>
 				</div>
 			</div>
+		
 		
 			<div class="form-group text-center">
 				<input type="submit" value="AGREGAR" class="btn btn-primary center-block">
