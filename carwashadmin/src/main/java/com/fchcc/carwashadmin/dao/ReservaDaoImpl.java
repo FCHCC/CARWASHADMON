@@ -2,8 +2,6 @@ package com.fchcc.carwashadmin.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//import java.text.DateFormat;
-//import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,16 +39,14 @@ public class ReservaDaoImpl implements ReservaDAO {
 
 	@Override
 	public int save(Reserva r) {
-		//DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
-		 //DateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); 
-		 
+		
 		String query ="insert into Reserva (ServiceName, Fecha,Hora) values ( :serviceName, :Fecha, :Hora)";
 		MapSqlParameterSource paramMap = new MapSqlParameterSource();
 		
       paramMap.addValue("serviceName", r.getServiceName());
       paramMap.addValue("Fecha", r.getFecha());
       paramMap.addValue("Hora", r.getHora());
-      // Passing map containing named params
+
       return namedParameterJdbcTemplate.update(query, paramMap);
 		
 	}
@@ -65,8 +61,7 @@ public class ReservaDaoImpl implements ReservaDAO {
 
 	@Override
 	public void update(Reserva r) {
-		//DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
-		 //DateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); 
+		
 		String query = "update Reserva set ServiceName = :serviceName, Fecha = :Fecha, Hora = :Hora where Id = :Id";
 		  SqlParameterSource namedParameters = new MapSqlParameterSource()
 				  .addValue("serviceName", r.getServiceName())
